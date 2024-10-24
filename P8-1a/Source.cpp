@@ -6,19 +6,28 @@
 using namespace std;//standard namespace
 
 
-int countCharacter(string str);
+int countVowel(string str);
 
 
 int main() {
-    string str = "abcd";
-    cout << countCharacter(str);
+    string str;
+    while (true) {
+        cout << "Enter a string or Q to quit:";
+        cin >> str;
+
+        if (str == "Q")
+            break;
+        cout << "Vowel count: " << countVowel(str) << endl;
+
+    }
 }
 
 
-int countCharacter(string str) {
+int countVowel(string str) {
     int count = 0;
     for (int i = 0; str[i] != '\0'; i++) {
-        count++;
+        if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u' || str[i] == 'A' || str[i] == 'E' || str[i] == 'I' || str[i] == 'O' || str[i] == 'U')
+            count++;
     }
     return count;
 }
