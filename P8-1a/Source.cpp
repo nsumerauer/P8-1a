@@ -14,7 +14,6 @@ int main() {
     while (true) {
         cout << "Enter a string or Q to quit:";
         cin >> str;
-
         if (str == "Q")
             break;
         cout << "Vowel count: " << countVowel(str) << endl;
