@@ -13,7 +13,7 @@ int main() {
     string str;
     while (true) {
         cout << "Enter a string or Q to quit:";
-        cin >> str;
+        getline(cin, str);
         if (str == "Q")
             break;
         cout << "Vowel count: " << countVowel(str) << endl;
